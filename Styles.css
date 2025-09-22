@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 40px;
+  background: #f5f5f5;
+}
+
+/* Box styling */
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  background: steelblue;
+  border-radius: 10px;
+  /* Smooth transition for hover */
+  transition: transform 0.5s ease, background 0.5s ease;
+}
+
+/* Hover effect using transition */
+.box:hover {
+  background: tomato;
+  transform: scale(1.2);
+}
+
+/* Keyframe animation */
+@keyframes slideAndSpin {
+  0%   { transform: translateX(0) rotate(0deg); }
+  50%  { transform: translateX(150px) rotate(180deg); }
+  100% { transform: translateX(0) rotate(360deg); }
+}
+
+/* Class added by JS to trigger animation */
+.animate {
+  animation: slideAndSpin 3s infinite;
+}
