@@ -1,0 +1,22 @@
+// Global variable for scope demonstration
+let box = document.getElementById('animateBox');
+
+// Function with a parameter & return value
+function toggleClass(element, className) {
+  element.classList.toggle(className);
+  // Return true if class was added, false if removed
+  return element.classList.contains(className);
+}
+
+// Function to start animation
+function startAnimation() {
+  let isAdded = toggleClass(box, 'animate');
+  console.log("Animation started:", isAdded);
+}
+
+// Function to stop animation
+function stopAnimation() {
+  // Local variable scope
+  const removed = box.classList.remove('animate');
+  console.log("Animation stopped");
+}
